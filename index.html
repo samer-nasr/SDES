@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" ></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="title">Simplified DES</h2>
+
+    <div class="inputs">
+        <h3>INPUTS</h3>
+        <p>KEY:</p>
+        <input id="key"  type="text" value="1010000010">
+
+        <p>PLAIN TEXT:</p>
+        <input id="plain-text" type="text" value="01110010">
+
+        <button class="calc" >Calculate</button>
+    </div>
+
+    <div class="key">
+        <img class="key-gen-img" src="keygen.jpg" alt="">
+        <h3>KEY GENERATION</h3>
+
+        <br>
+        <label for="">Step 1 P10:</label>
+        <label class="result-p10" for=""></label>
+
+        <br>
+        <label for="">Step 2 Split:</label>
+        <label class="split1" for=""></label>
+
+        <br>
+        <label for="">Step 3 LS-1:</label>
+        <label class="LS-1" for=""></label>
+
+        <br>
+        <label for="">Step 4 Join the 2 sides:</label>
+        <label class="join" for=""></label>
+
+        <br>
+        <label for="">Step 5 P8:</label>
+        <label class="p8" for=""></label>
+
+        <br><br>
+        <label for="">K1:</label>
+        <label class="p8" for=""></label>
+
+        <br><br>
+
+        <br>
+        <label for="">Step 6 LS-2:</label>
+        <label class="LS-2" for=""></label>
+
+        <br>
+        <label for="">Step 7 P8 after LS-2:</label>
+        <label class="p8-after-ls2" for=""></label>
+
+        <br><br>
+        <label for="">K2:</label>
+        <label class="p8-after-ls2" for=""></label>
+
+    </div>
+
+    <div class="key">
+        <img class="encryption-png" src="encryption.png" alt="">
+        <h3>ROUND 1</h3>
+        <label for="">Step 8 IP for plaintext:</label>
+        <label class="step8-ip"></label>
+
+        <label for="">Step 9 Split after IP:</label>
+        <label class="step9-split"></label>
+
+        <label for="">Step 10 EP for the right part:</label>
+        <label class="step10-ep"></label>
+
+        <label for="">Step 11 XOR with k1:</label>
+        <label class="step11-xor"></label>
+
+        <label for="">Step 12 S0 S1:</label>
+        <label class="step12-s0s1"></label>
+
+        <label for="">Step 13 P4 for S0 and S1:</label>
+        <label class="step13-p4s0s1"></label>
+
+        <label for="">Step 14 Xor with the left part:</label>
+        <label class="step14-xorwithleft"></label>
+
+        <label for="">Round 1 Finish:</label>
+        <label class="round1-finish"></label>
+
+        <h3>ROUND 2</h3>
+
+        <label for="">EP for the right part:</label>
+        <label class="round2-1"></label>
+
+        <label for="">XOR with k1:</label>
+        <label class="round2-2"></label>
+
+        <label for="">S0 S1:</label>
+        <label class="round2-3"></label>
+
+        <label for="">P4 for S0 and S1:</label>
+        <label class="round2-4"></label>
+
+        <label for="">Xor with the left part:</label>
+        <label class="round2-5"></label>
+
+        <label for="">Round 2 Finish:</label>
+        <label class="round2-6"></label>
+
+        <label class="test" for=""></label>
+
+    </div>
+    
+    
+
+
+
+
+    <script src="Action.js" ></script>
+</body>
+</html>
