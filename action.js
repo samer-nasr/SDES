@@ -91,8 +91,10 @@ $(document).ready(function() {
             $(".round2-3").text(res2[2].substring(0,2) + " || " + res2[2].substring(2,4));
             $(".round2-4").text(res2[3]);
             $(".round2-5").text(res2[4]);
-            $(".round2-6").text(rightForRound2);
-            $(".round2-7").text(IP_1(res2[5]));
+
+            var last = res2[5].substring(0,4)+rightForRound2;
+            $(".round2-6").text(IP_1(last));
+            $(".round2-7").text(IP_1(last));
 
         });
 
@@ -143,7 +145,7 @@ $(document).ready(function() {
             results[4] = afterXorWithLeft;
 
         // Round 1 Finish//
-        var last = afterXorWithLeft + ""+ rightInput;
+        var last = afterXorWithLeft + " "+ rightInput;
         results[5] = last;
 
         return results;
