@@ -3,6 +3,7 @@ var numb8 = [1,2,3,4,5,6,7,8];
 var p10 = [3,5,2,7,4,10,1,9,8,6];
 var p8 = [6,3,7,4,8,5,10,9];
 var ip = [2,6,3,1,4,8,5,7];
+var ip_1 = [4,1,3,5,7,2,8,6];
 var ep = [4,1,2,3,2,3,4,1];
 var p4 = [2,4,3,1];
 var k1 = "";
@@ -90,7 +91,8 @@ $(document).ready(function() {
             $(".round2-3").text(res2[2].substring(0,2) + " || " + res2[2].substring(2,4));
             $(".round2-4").text(res2[3]);
             $(".round2-5").text(res2[4]);
-            $(".round2-6").text(res2[5]);
+            $(".round2-6").text(rightForRound2);
+            $(".round2-7").text(IP_1(res2[5]));
 
         });
 
@@ -141,7 +143,7 @@ $(document).ready(function() {
             results[4] = afterXorWithLeft;
 
         // Round 1 Finish//
-        var last = afterXorWithLeft + " "+ rightInput;
+        var last = afterXorWithLeft + ""+ rightInput;
         results[5] = last;
 
         return results;
@@ -251,5 +253,14 @@ $(document).ready(function() {
     for (let i = 0; i < 4; i++) {
         res += input.charAt(p4[i]-1);
     }
+    return res;
+  }
+
+  function IP_1(input){
+    var res = "";
+    for (let i = 0; i < input.length; i++) {
+        res += input.charAt(ip_1[i] -1);
+    }
+
     return res;
   }
